@@ -1,0 +1,30 @@
+{
+  "name": "sketch-toolbar-item-demo",
+  "description": "",
+  "version": "0.1.0",
+  "engines": {
+    "sketch": ">=49.0"
+  },
+  "skpm": {
+    "name": "sketch-toolbar-item-demo",
+    "manifest": "src/manifest.json",
+    "main": "sketch-toolbar-item-demo.sketchplugin",
+    "assets": [
+      "assets/**/*"
+    ],
+    "sketch-assets-file": "sketch-assets/icons.sketch"
+  },
+  "scripts": {
+    "build": "skpm-build",
+    "watch": "skpm-build --watch",
+    "start": "skpm-build --watch --run",
+    "postinstall": "npm run build && skpm-link"
+  },
+  "devDependencies": {
+    "@skpm/builder": "^0.7.0"
+  },
+  "author": "Aby Nimbalkar <abynimbalkar@gmail.com>",
+  "dependencies": {
+    "sketch-toolbar-item": "^0.1.3"
+  }
+}

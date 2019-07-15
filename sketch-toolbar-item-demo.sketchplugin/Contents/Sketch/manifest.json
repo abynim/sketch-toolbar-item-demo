@@ -1,0 +1,58 @@
+{
+  "$schema": "https://raw.githubusercontent.com/BohemianCoding/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "icon": "icon.png",
+  "identifier": "com.abynim.SketchToolbarIconDemo",
+  "commands": [
+    {
+      "script": "my-command.js",
+      "handlers": {
+        "run": "sayHello",
+        "ValidateToolbarItem": "validateToolbarItem"
+      },
+      "shortcut": "",
+      "name": "Hello",
+      "identifier": "hello"
+    },
+    {
+      "script": "my-command.js",
+      "handlers": {
+        "run": "sayNamaste",
+        "ValidateToolbarItem": "validateToolbarItem"
+      },
+      "shortcut": "",
+      "name": "Namaste",
+      "identifier": "namaste"
+    },
+    {
+      "script": "my-command.js",
+      "handlers": {
+        "run": "sayGoodbye",
+        "ValidateToolbarItem": "validateToolbarItem"
+      },
+      "shortcut": "",
+      "name": "Goodbye",
+      "identifier": "goodbye"
+    },
+    {
+      "script": "my-command.js",
+      "handlers": {
+        "actions": {
+          "Startup": "registerToolbarActions"
+        }
+      }
+    }
+  ],
+  "menu": {
+    "title": "Sketch Toolbar Icon",
+    "items": [
+      "hello"
+    ]
+  },
+  "version": "0.1.0",
+  "description": "",
+  "name": "sketch-toolbar-item-demo",
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://raw.githubusercontent.com//master/.appcast.xml",
+  "author": "Aby Nimbalkar",
+  "authorEmail": "abynimbalkar@gmail.com"
+}
