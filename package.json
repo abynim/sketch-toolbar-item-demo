@@ -25,6 +25,6 @@
   },
   "author": "Aby Nimbalkar <abynimbalkar@gmail.com>",
   "dependencies": {
-    "sketch-toolbar-item": "^0.1.3"
+    "sketch-toolbar-item": "^0.1.4"
   }
 }
