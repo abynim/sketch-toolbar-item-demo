@@ -21,10 +21,11 @@
     "postinstall": "npm run build && skpm-link"
   },
   "devDependencies": {
-    "@skpm/builder": "^0.7.0"
+    "@skpm/builder": "^0.7.7"
   },
   "author": "Aby Nimbalkar <abynimbalkar@gmail.com>",
   "dependencies": {
-    "sketch-toolbar-item": "^0.1.4"
+    "@skpm/xcodeproj-loader": "^0.1.6",
+    "sketch-toolbar-item": "^0.1.5"
   }
 }

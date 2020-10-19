@@ -4,7 +4,7 @@
   "identifier": "com.abynim.SketchToolbarIconDemo",
   "commands": [
     {
-      "script": "my-command.js",
+      "script": "__my-command.js",
       "handlers": {
         "run": "sayHello",
         "ValidateToolbarItem": "validateToolbarItem"
@@ -14,7 +14,7 @@
       "identifier": "hello"
     },
     {
-      "script": "my-command.js",
+      "script": "__my-command.js",
       "handlers": {
         "run": "sayNamaste",
         "ValidateToolbarItem": "validateToolbarItem"
@@ -24,7 +24,7 @@
       "identifier": "namaste"
     },
     {
-      "script": "my-command.js",
+      "script": "__my-command.js",
       "handlers": {
         "run": "sayGoodbye",
         "ValidateToolbarItem": "validateToolbarItem"
@@ -34,7 +34,7 @@
       "identifier": "goodbye"
     },
     {
-      "script": "my-command.js",
+      "script": "__my-command.js",
       "handlers": {
         "actions": {
           "Startup": "registerToolbarActions"

@@ -1,6 +1,8 @@
 var globalThis = this;
+var global = this;
 function __skpm_run (key, context) {
   globalThis.context = context;
+  try {
 
 var exports =
 /******/ (function(modules) { // webpackBootstrap
@@ -622,12 +624,19 @@ module.exports = require("sketch");
 /***/ })
 
 /******/ });
-  if (key === 'default' && typeof exports === 'function') {
-    exports(context);
-  } else if (typeof exports[key] !== 'function') {
-    throw new Error('Missing export named "' + key + '". Your command should contain something like `export function " + key +"() {}`.');
-  } else {
-    exports[key](context);
+    if (key === 'default' && typeof exports === 'function') {
+      exports(context);
+    } else if (typeof exports[key] !== 'function') {
+      throw new Error('Missing export named "' + key + '". Your command should contain something like `export function " + key +"() {}`.');
+    } else {
+      exports[key](context);
+    }
+  } catch (err) {
+    if (typeof process !== 'undefined' && process.listenerCount && process.listenerCount('uncaughtException')) {
+      process.emit("uncaughtException", err, "uncaughtException");
+    } else {
+      throw err
+    }
   }
 }
 globalThis['sayHello'] = __skpm_run.bind(this, 'sayHello');
@@ -639,4 +648,4 @@ globalThis['sayGoodbye'] = __skpm_run.bind(this, 'sayGoodbye');
 globalThis['validateToolbarItem'] = __skpm_run.bind(this, 'validateToolbarItem');
 globalThis['registerToolbarActions'] = __skpm_run.bind(this, 'registerToolbarActions')
 
-//# sourceMappingURL=my-command.js.map
+//# sourceMappingURL=__my-command.js.map
